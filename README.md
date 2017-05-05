@@ -1,6 +1,6 @@
 # Django-heroku-practice
-## General
-+ Install django(on Windows system, if easy_install django does not work, use pip install django) and check django version by using command: python -c "import django; print(django.get_version())"
+## General:
+* Install django(on Windows system, if easy_install django does not work, use pip install django) and check django version by using command: python -c "import django; print(django.get_version())"
 * I found some installation error when using easy_install on a Chinese Windows system (FIX-ME: fix dir name error).
 * Run server by using command: python manage.py runserver
 ## File explanation:
