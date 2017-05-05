@@ -19,10 +19,8 @@
 ## database:
 * Use 'python manage.py shell' to add, delete and update.
 * Example:
-
-+ Staff.objects.all() shows all data in info table.
-** staff = Staff( staff_name      = 'Alan',
-                  branch_location = 'downtown', available_time  = '2013-10-07 08:23:19.120')
-*** time example from https://sqlite.org/lang_datefunc.html
-** staff.save() save data into the database
-** staff.staff_name return the staff name as we set before.  
+  + Staff.objects.all() shows all data in info table.
+  + staff = Staff( staff_name      = 'Alan',
+                  branch_location = 'downtown', available_time  = '2013-10-07 08:23:19.120') time example from https://sqlite.org/lang_datefunc.html
+  + staff.save() save data into the database
+  + staff.staff_name return the staff name as we set before.  
