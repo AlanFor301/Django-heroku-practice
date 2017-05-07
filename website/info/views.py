@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from models import Staff
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 # Create your views here.
 
@@ -12,9 +12,6 @@ def index(request):
     return render(request, 'info/index.html', context)
 
 def detail(request, staff_id):
-    try:
-        staff = Staff.objects.get(pk=staff_id)
-    except Staff.DoesNotExist:
-        raise Http404("staff does not exist!")
-
+    # staff = Staff.objects.get(pk=staff_id)
+    staff = get_object_or_404(Staff, pk = staff_id)
     return render(request, 'info/detail.html', {'staff': staff})

@@ -2,7 +2,7 @@
 <ul>
   <!-- loops for all staffs-->
   {% for staff in all_staff %}
-  <li><a href = "{%url 'detail' staff.id%}"> {{staff}}</a></li>
+  <li><a href = "{%url 'info:detail' staff.id%}"> {{staff}}</a></li>
   {%endfor%}
 
 </ul>

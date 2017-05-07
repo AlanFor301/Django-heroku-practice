@@ -1,4 +1,7 @@
-#DateTimeField:
+# DateTimeField:
   * When initialize the datetime.date type data, use:
       from datetime import datetime
         default = datetime.today()
+
+# Shortcuts avoiding hardcode urls:
+    
