@@ -1,0 +1,7 @@
+<ul>
+  <!-- loops for all staffs-->
+  {% for staff in all_staff %}
+  <li><a href = '/info/{{staff.id}}'> {{staff.staff_name}}</a></li>
+  {%endfor%}
+
+</ul>
