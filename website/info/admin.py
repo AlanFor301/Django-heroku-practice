@@ -2,5 +2,7 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
+from .models import Staff
+# Register your models hee.
 
-# Register your models here.
+admin.site.register(Staff)
