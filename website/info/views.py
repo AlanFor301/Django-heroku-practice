@@ -17,4 +17,4 @@ def detail(request, staff_id):
     except Staff.DoesNotExist:
         raise Http404("staff does not exist!")
 
-    return render(request, 'info/detail.html', {'staff': staff.staff_name})
+    return render(request, 'info/detail.html', {'staff': staff})

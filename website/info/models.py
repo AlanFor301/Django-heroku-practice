@@ -8,3 +8,5 @@ class Staff(models.Model):
     staff_name = models.CharField(max_length=250)
     branch_location = models.CharField(max_length= 100)
     available_time = models.DateTimeField()
+    def __str__(self):
+        return self.staff_name + ' - ' + self.branch_location
