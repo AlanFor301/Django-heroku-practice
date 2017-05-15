@@ -21,10 +21,9 @@ def chosen(request):
     try:
         chosen_staff = all_staff.get(pk=request.POST['staff'])
     except (KeyError, chosen_staff.DoesNotExist):
-
         return render(request, 'info/index.html', {'staff': chosen_staff, 'error_message': "you did not chose a valid staff"})
     else:
-        print("success")
+        print("success ", chosen_staff.staff_name)
         chosen_staff.is_chosen = True
         chosen_staff.save()
-        return render(request, 'info/index.html')
+        return render(request, 'info/detail.html', {'staff': chosen_staff})
