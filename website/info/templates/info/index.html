@@ -5,7 +5,6 @@
   {% for staff in all_staff %}
     <input type="radio" id = "staff{{forloop.counter}}" name="staff" value = {{staff.id}}>
     <label for "staff{{forloop.counter}}">
-      {{staff.staff_name}}
       {% if staff.is_chosen %}
         <img src="http://lovequoteslove.cdnsw.netdna-cdn.com/wp-content/themes/lovequotes-V3/images/default-thumb-50.png"/>
       {% endif %}
