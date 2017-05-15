@@ -5,3 +5,8 @@
 
 # Shortcuts avoiding hardcode urls:
     action="{% url 'info:chosen' staff.staff_id%}"
+
+# html page receives variable name based on the request:
+  eg. return render(request, 'info/detail.html', {'staff': chosen_staff})
+  If the request is like this in view.py, in detail.html page staff has the value
+  chosen_staff.
