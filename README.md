@@ -27,3 +27,5 @@
   + Date example from https://sqlite.org/lang_datefunc.html
   + staff.save() save data into the database
   + staff.staff_name return the staff name as we set before.  
+# Functionality:
+  A user now has a ability to choose multiple users and check their availability;

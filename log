@@ -4,4 +4,4 @@
         default = datetime.today()
 
 # Shortcuts avoiding hardcode urls:
-    
+    action="{% url 'info:chosen' staff.staff_id%}"

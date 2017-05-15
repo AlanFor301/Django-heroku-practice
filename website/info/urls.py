@@ -9,4 +9,7 @@ urlpatterns = [
 
     # /info/<staff_id>/ ^ represent begining $ ends
     url(r'^(?P<staff_id>[0-9]+)/$', views.detail, name='detail'),
+
+    #/info/<staff_id>/chosen/ when this url is called it looks for chosen module in views.
+    url(r'^(?P<staff_id>[0-9]+)/chosen/$', views.chosen, name='chosen'),
 ]

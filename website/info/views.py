@@ -15,3 +15,13 @@ def detail(request, staff_id):
     # staff = Staff.objects.get(pk=staff_id)
     staff = get_object_or_404(Staff, pk = staff_id)
     return render(request, 'info/detail.html', {'staff': staff})
+
+def chosen(request, staff_id):
+    try:
+        chosen_staff = get_object_or_404(Staff, pk = staff_id)
+    except (KeyError, chosen_staff.DoesNotExist):
+        return render(request, 'info/index.html', {'staff': chosen_staff, 'error_message': "you did not chose a valid staff"})
+    else:
+        chosen_staff.is_chosen = true
+        chosen_staff.save()
+        return render(request, 'info/index.html', {'staff': staff})

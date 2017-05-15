@@ -1,8 +1,10 @@
 <h1>Here is all staffs list</h1>
-<ul>
-  <!-- loops for all staffs-->
-  {% for staff in all_staff %}
-  <li><a href = "{%url 'info:detail' staff.id%}"> {{staff}}</a></li>
-  {%endfor%}
 
-</ul>
+<form  action = "{% url 'info:chosen'%}"method="post">
+  {% csrf_token%}
+  {% for staff in all_staff %}
+    <input type="radio" id = "staff{{forloop.counter}}" name="staff" value = {{staff.id}}>
+    <label for "staff{{forloop.counter}}"> {{staff.staff_name}} </label><br>
+  {%endfor%}
+  <input type= "submit" value ="submit"/>
+</form>
